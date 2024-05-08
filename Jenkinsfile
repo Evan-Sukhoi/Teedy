@@ -11,6 +11,21 @@ pipeline {
         sh 'mvn pmd:pmd'
       }
     }
+    stage('Test') {
+      steps {
+        sh 'mvn test'
+      }
+      post {
+        always {
+          junit '**/target/surefire-reports/TEST-*.xml'
+        }
+      }
+    }
+    stage('Javadoc') {
+      steps {
+        sh 'mvn javadoc:jar'
+      }
+    }
   }
 
   post {
