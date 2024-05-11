@@ -58,7 +58,7 @@ jobs:
         id: metadata
         uses: docker/metadata-action@v3
         with:
-          images: sismics/docs
+          images: evaanli/teedy_test
           flavor: |
             latest=false
           tags: |
