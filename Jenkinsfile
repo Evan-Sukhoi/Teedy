@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'mvn test --fail-nerver'
+        sh 'mvn test --fail-never'
       }
       post {
         always {
