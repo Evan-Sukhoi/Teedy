@@ -8,7 +8,7 @@ pipeline {
       }
       stage('K8s') {
         steps {
-          sh 'kubectl set image deployments/hello-node teedy001=evaanli/teedy_jenkins'
+          sh 'kubectl set image deployments/hello-node 79f03256b92b24aa2e32cc729328892f5d903cb09766292a27c188ca64503211=evaanli/teedy_jenkins'
         }
       }
   }
