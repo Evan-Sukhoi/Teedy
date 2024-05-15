@@ -8,7 +8,7 @@ pipeline {
       }
       stage('K8s') {
         steps {
-          sh 'kubectl set image deployments/hello-node docs=sismics/docs:v1.12'
+          sh 'kubectl set image deployments/hello-node teedy_jenkins=evaanli/teedy_jenkins'
         }
       }
   }
